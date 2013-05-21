@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+$stdout.sync = true
+
+require 'bundler/setup'
+require_relative '../lib/qubot'
+
+settings = {
+  logger:       Logger.new(STDOUT),
+  jabber_debug: ENV['XMPP_DEBUG'] || false,
+  server:       ENV['XMPP_SERVER'] || 'conf.hipchat.com',
+  jid:          ENV['XMPP_JID'],
+  password:     ENV['XMPP_PASSWORD'],
+  name:         ENV['XMPP_NAME'],
+  nick:         ENV['XMPP_NICK'],
+  rooms:        ENV['XMPP_ROOMS'].split(',').map(&:strip),
+}
+
+Qubot::Runner.new(settings) do
+  use Qubot::Plugin::Cv
+  use Qubot::Plugin::GoogleImages
+  use Qubot::Plugin::Niconico
+  use Qubot::Plugin::Pixiv
+  use Qubot::Plugin::Status
+  use Qubot::Plugin::Wikipedia
+end.connect.run
