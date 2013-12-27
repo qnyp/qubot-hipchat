@@ -2,8 +2,8 @@
 
 ## Prerequisite
 
-* Ruby 2.0.0
-* foreman
+* Ruby 2.1.0
+* Foreman
 
 ## Local Setup
 

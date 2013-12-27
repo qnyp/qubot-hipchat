@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.1.0'
 
 gem 'activesupport', '3.2.13'
 gem 'mad-p-xmpp4r', '0.6.3'
