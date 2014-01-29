@@ -1,5 +1,7 @@
 # qubot - Simple chat bot for HipChat
 
+[![Code Climate](https://codeclimate.com/github/qnyp/qubot.png)](https://codeclimate.com/github/qnyp/qubot)
+
 ## Prerequisite
 
 * Ruby 2.1.0
